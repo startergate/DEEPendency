@@ -1,7 +1,13 @@
 {
+  "name": "deependency",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "https://github.com/startergate/DEEPendency.git",
+  "author": "startergate <startergate36@gmail.com>",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "puppeteer": "^2.1.1"
+    "cheerio": "^1.0.0-rc.3"
   }
 }
