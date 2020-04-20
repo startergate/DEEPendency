@@ -6,6 +6,6 @@ const rl = readline.createInterface({input: process.stdin, output: process.stdou
 
 rl.question('STEAM ID> ', (id: string) => {
     rl.question('APP NAME> ', (appName: string) => {
-        
+
     });
 });
