@@ -13,3 +13,17 @@ const subscriber = async (appid: number, assetid: number, session: string) => {
         headers: {}
     });
 };
+
+const getAssetList = async (userid: string, appid: number) => {
+    const url = getUrl(userid, appid);
+    let assetList = [];
+    const assetListHtml = await axios.get(url);
+
+    console.log(cheerio.parseHTML(assetListHtml.data))
+};
+
+const subscribe = (userid: string, password: string, appid: number) => {
+    getAssetList(userid, appid);
+};
+
+export default subscribe;
