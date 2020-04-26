@@ -16,14 +16,15 @@ const subscriber = async (appid: number, assetid: number, session: string) => {
 
 const getAssetList = async (userid: string, appid: number) => {
     const url = getUrl(userid, appid);
-    let assetList = [];
-    const assetListHtml = await axios.get(url);
+    let assetList: string[] = [];
+    const data = (await axios.get(url)).data;
+    const $ = cheerio.load(data.data);
 
-    console.log(cheerio.parseHTML(assetListHtml.data))
+    return assetList;
 };
 
-const subscribe = (userid: string, password: string, appid: number) => {
-    getAssetList(userid, appid);
+const subscribe = async (userid: string, password: string, appid: number) => {
+    let list = await getAssetList(userid, appid);
 };
 
 export default subscribe;
