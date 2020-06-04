@@ -5,7 +5,6 @@
   "repository": "https://github.com/startergate/DEEPendency.git",
   "author": "startergate <startergate36@gmail.com>",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "build": "tsc",
     "dev": "ts-node src"
